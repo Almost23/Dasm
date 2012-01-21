@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "about.h"
+#include "header/about.h"
 #include "ui_about.h"
 
 about::about(QWidget *parent) :
