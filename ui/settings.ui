@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>settings</class>
+ <widget class="QDialog" name="settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>413</width>
+    <height>334</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>265</x>
+     <y>300</y>
+     <width>141</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>421</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <property name="elideMode">
+    <enum>Qt::ElideNone</enum>
+   </property>
+   <property name="usesScrollButtons">
+    <bool>true</bool>
+   </property>
+   <property name="documentMode">
+    <bool>false</bool>
+   </property>
+   <property name="tabsClosable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Disassembler</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Display</string>
+    </attribute>
+    <widget class="QLabel" name="display">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Default Display </string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="displayComboBox">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>0</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="modelColumn">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Long Word</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Word</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Half Word</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Byte</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="font">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Font</string>
+     </property>
+    </widget>
+    <widget class="QFontComboBox" name="fontComboBox">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="currentFont">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>settings</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>335</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

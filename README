@@ -1,0 +1,20 @@
+Copyright (c) 2012, Almost23 (Almondy23@gmail.com)
+See COPYING for licensing information
+
+Dasm 0.1a
+
+Contents
+1. About
+2. Changelog
+
+
+1. About
+
+Dasm is a free, open-source, (future) cross-platform dissassembler 
+desigend to be easy to use and fully customizable. Dasm is currently
+an alpha build; Check back for more features soon.
+
+2. Changelog 
+
+v0.1a
+-Initial release/POC
