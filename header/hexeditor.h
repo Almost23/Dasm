@@ -9,8 +9,7 @@
 #include <QTableWidget>
 #include <QHeaderView>
 #include <QShortcut>
-//#include <QItemSelectionModel>
-#include "mainwindow.h"
+#include "header/mainwindow.h"
 
 class MainWindow;
 

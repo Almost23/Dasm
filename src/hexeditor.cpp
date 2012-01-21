@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "hexeditor.h"
+#include "header/hexeditor.h"
 
 hexeditor::hexeditor(QWidget *parent) :
     QTableWidget(parent)

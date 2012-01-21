@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "settings.h"
+#include "header/settings.h"
 #include "ui_settings.h"
 
 settings::settings(QWidget *parent) :

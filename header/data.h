@@ -34,14 +34,12 @@ public:
     int    setDisplayData(int address, int type);
     void   resetData(const char* dat, qint64 Size, QVector<int> offsets);
 
-    char* bin;
-    char* display;
-
-
 protected:
-    qint64 size;
-    uint   fOff;
-    uint   addrOff;
+    char* bin;       //Holds the contents of a loaded file
+    char* display;   //Hold information on how to display a loaded file
+    qint64 size;     //Size of loaded file
+    uint   fOff;     //Offset in a loaded file from which to begin loading from
+    uint   addrOff;  //Offset from 0 which is aliased to bin[0]
 };
 
 #endif // DATA_H

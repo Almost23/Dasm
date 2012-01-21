@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "patch.h"
+#include "header/patch.h"
 #include "ui_patch.h"
 
 patch::patch(QWidget *parent) :

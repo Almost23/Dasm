@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "mainwindow.h"
+#include "header/mainwindow.h"
 #include <QtGui/QApplication>
 
 int main(int argc, char *argv[])

@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "mainwindow.h"
+#include "header/mainwindow.h"
 #include "ui_mainwindow.h"
 
 #define MAX_SIZE 0x3200000

@@ -10,7 +10,7 @@
 #include <QHeaderView>
 #include <QTableWidgetItem>
 #include <QVector>
-#include "mainwindow.h"
+#include "header/mainwindow.h"
 
 #define rows 24
 #define columns 5

@@ -3,8 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "data.h"
-
+#include "header/data.h"
 
 #define defaultDisplay 4
 
@@ -31,6 +30,8 @@ Data::Data(QWidget *Parent, const char *dat, qint64 Size, QVector<int> offsets)
 Data::~Data(){
     delete[] bin;
 }
+
+//Returns
 unsigned int Data::getAddressOffset(){
     return addrOff;
 }

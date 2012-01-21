@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "tablewidget.h"
+#include "header/tablewidget.h"
 
 tablewidget::tablewidget(QWidget *Parent) : QTableWidget(Parent)
 {

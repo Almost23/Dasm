@@ -3,7 +3,7 @@
     See COPYING for licensing information
 */
 
-#include "loadfrom.h"
+#include "header/loadfrom.h"
 #include "ui_loadfrom.h"
 
 loadfrom::loadfrom(QWidget *parent) :

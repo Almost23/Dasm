@@ -9,12 +9,12 @@
 #include <QMainWindow>
 #include <QtGui>
 #include <QFile>
-#include "about.h"
-#include "loadfrom.h"
-#include "patch.h"
-#include "data.h"
-#include "settings.h"
-#include "tablewidget.h"
+#include "header/about.h"
+#include "header/loadfrom.h"
+#include "header/patch.h"
+#include "header/data.h"
+#include "header/settings.h"
+#include "header/tablewidget.h"
 
 class tablewidget;
 class hexEditor;
