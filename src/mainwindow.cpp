@@ -15,8 +15,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
-    setMinimumSize(350, 200);
-
     QVector<int> vect; vect.append(0); vect.append(0);
     allData = new Data(this,NULL,0,vect);
 
@@ -58,6 +56,15 @@ MainWindow::MainWindow(QWidget *parent) :
     shortcut = new QShortcut(QKeySequence(Qt::Key_Down), ui->tableWidget);
     shortcut->setContext(Qt::WidgetShortcut);
     connect(shortcut, SIGNAL(activated()), ui->tableWidget, SLOT(shiftTable()));
+
+    shortcut = new QShortcut(QKeySequence(Qt::Key_Up | Qt::Key_Control), ui->tableWidget);
+    shortcut->setContext(Qt::WidgetShortcut);
+    connect(shortcut, SIGNAL(activated()), ui->tableWidget, SLOT(shiftTable()));
+
+    shortcut = new QShortcut(QKeySequence(Qt::Key_Down | Qt::Key_Control), ui->tableWidget);
+    shortcut->setContext(Qt::WidgetShortcut);
+    connect(shortcut, SIGNAL(activated()), ui->tableWidget, SLOT(shiftTable()));
+
 }
 
 MainWindow::~MainWindow()
@@ -92,7 +99,7 @@ QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "",
                    file.seek(load.at(1));
                    allData->resetData(file.read(file.size()-load.at(1)).constData(), file.size()-load.at(1), load);
 
-                   ui->tableWidget->updateDisplay(allData->getAddressOffset());
+                   ui->tableWidget->updateDisplay(allData->getAddressOffset(),true);
                    ui->HexEditor->updateDisplay(allData->getAddressOffset());
 
                }
@@ -165,10 +172,9 @@ void MainWindow::jumpAddress(){
     //(short version: this assumes the target address should be displayed as a word)
     address -= address%4;
     if(isHex){
-        ui->tableWidget->updateDisplay(address);
+        ui->tableWidget->updateDisplay(address, true);
         ui->HexEditor->syncHexEditor(address);
     }
-
 
 }
 

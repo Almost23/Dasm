@@ -39,6 +39,8 @@ FORMS    +=          \
 
 RESOURCES +=
 
+OTHER_FILES +=
+
 
 
 

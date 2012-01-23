@@ -30,13 +30,17 @@ class tablewidget : public QTableWidget
 public:
     explicit tablewidget(QWidget *parent = 0);
     void init(MainWindow *Parent);
-    void updateDisplay(int address);
+    void updateDisplay(int address, bool updateSelection);
     void syncTableWidget(int address);
     QMap<int, QPair<int,bool> > patchMap; // <addr, <val, enabled> >
+
+    //Reimplementation
+    void resizeEvent(QResizeEvent *event);
 
 public slots:
     void validateChange(int row, int column);
     void onSelectionChange(int new_row, int new_column, int old_row, int old_column);
+    //void onResize();
     void shiftTable();
     void setDisplayFormat();
 
